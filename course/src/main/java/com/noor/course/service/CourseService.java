@@ -3,6 +3,7 @@ package com.noor.course.service;
 import com.noor.course.model.Course;
 import com.noor.course.repository.CourseRepository;
 import com.noor.course.util.AuthClient;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class CourseService {
     private final CourseRepository courseRepo;
     private final AuthClient authClient;
 
-    public CourseService(CourseRepository courseRepo, AuthClient authClient) {
+    public CourseService(CourseRepository courseRepo, @Qualifier("authClientFallback") AuthClient authClient) {
         this.courseRepo = courseRepo;
         this.authClient = authClient;
     }
