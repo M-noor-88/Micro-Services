@@ -1,0 +1,25 @@
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone:http: http://localhost:9761/eureka
+
+server:
+  port: 8093
+spring:
+  application:
+    name: course
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    url: jdbc:h2:mem:course
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
