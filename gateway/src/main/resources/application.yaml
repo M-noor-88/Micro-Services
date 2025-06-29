@@ -1,0 +1,39 @@
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+server:
+  port: 8222
+
+spring:
+  application:
+    name: gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+        - id: auth
+          uri: http://localhost:8092
+          predicates:
+            - Path=/auth/**
+        - id: course
+          uri: http://localhost:8093
+          predicates:
+            - Path=/courses/**
+        - id: payment
+          uri: http://localhost:8094
+          predicates:
+            - Path=/payments/**
+        - id: subscription
+          uri: http://localhost:8095
+          predicates:
+            - Path=/subscriptions/**
+        - id: exam
+          uri: http://localhost:8096
+          predicates:
+            - Path=/exams/**
+

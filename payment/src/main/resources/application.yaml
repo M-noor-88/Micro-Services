@@ -1,5 +1,4 @@
 
-
 eureka:
   instance:
     hostname: localhost
@@ -8,14 +7,14 @@ eureka:
       defaultZone:http: http://localhost:9761/eureka
 
 server:
-  port: 8092
+  port: 8094
 spring:
   application:
-    name: auth
+    name: payment
   config:
     import: optional:configserver:http://localhost:8888
   datasource:
-    url: jdbc:h2:mem:mydb
+    url: jdbc:h2:mem:payment
     username: sa
     password:
     driverClassName: org.h2.Driver

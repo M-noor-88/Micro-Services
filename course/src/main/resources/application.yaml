@@ -20,6 +20,6 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database: h2
     database-platform: org.hibernate.dialect.H2Dialect

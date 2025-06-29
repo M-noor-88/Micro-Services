@@ -11,17 +11,20 @@
         <module name="gateway" />
         <module name="discovery" />
       </profile>
-      <profile name="Annotation profile for course" enabled="true">
+      <profile name="Annotation profile for subscription" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath>
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="course" />
-        <module name="user" />
+        <module name="exam" />
         <module name="auth" />
         <module name="userAuth" />
+        <module name="course" />
+        <module name="payment" />
+        <module name="subscription" />
+        <module name="user" />
       </profile>
     </annotationProcessing>
   </component>
@@ -31,7 +34,10 @@
       <module name="config-server" options="-parameters" />
       <module name="course" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="exam" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="payment" options="-parameters" />
+      <module name="subscription" options="-parameters" />
       <module name="user" options="-parameters" />
       <module name="userAuth" options="-parameters" />
     </option>

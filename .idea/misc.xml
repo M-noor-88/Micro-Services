@@ -11,6 +11,9 @@
         <option value="$PROJECT_DIR$/userAuth/pom.xml" />
         <option value="$PROJECT_DIR$/auth/pom.xml" />
         <option value="$PROJECT_DIR$/course/pom.xml" />
+        <option value="$PROJECT_DIR$/payment/pom.xml" />
+        <option value="$PROJECT_DIR$/subscription/pom.xml" />
+        <option value="$PROJECT_DIR$/exam/pom.xml" />
       </list>
     </option>
   </component>
